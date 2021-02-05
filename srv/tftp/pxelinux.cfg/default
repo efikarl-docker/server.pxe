@@ -1,0 +1,11 @@
+DEFAULT clear
+TIMEOUT 5
+
+LABEL   memtest
+        MENU LABEL      MemTest Tool
+        KERNEL          oses/memtest/memtest.bin
+
+LABEL   clear
+        MENU LABEL      Clear@2020.05.16
+        KERNEL          oses/clear/org.clearlinux.native
+        INITRD          oses/clear/initrd

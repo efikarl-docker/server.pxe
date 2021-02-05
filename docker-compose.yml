@@ -1,0 +1,14 @@
+version: '3'
+services:
+  pxe:
+    build: .
+    image: pxe:latest
+    cap_add:
+      - NET_ADMIN
+    environment:
+      HTTP_USER: foo
+      HTTP_PASS: bar
+    volumes:
+      - ./etc/dnsmasq.conf:/etc/dnsmasq.conf
+    network_mode: "host"
+    restart: on-failure
